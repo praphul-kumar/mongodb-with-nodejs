@@ -13,6 +13,7 @@ const morgan = require('morgan');
 // HTTP request body parser
 const bodyParser = require('body-parser');
 
+const EmployeeRoute = require('./routes/employee');
 
 
 // Creating connection to mongodb on localhost
@@ -50,3 +51,4 @@ app.listen(PORT, () => {
     console.log(`Server is running on port ${PORT}`);
 });
 
+app.use('/api/employee', EmployeeRoute);
